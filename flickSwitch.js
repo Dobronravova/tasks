@@ -10,19 +10,19 @@
 // flickSwitch([false, false, "flick", "sheep", "flick"]) ➞ [true, true, false, false, true]
 
 function flickSwitch(array) {
-  let newArr = [];
   let trueItem = true;
-  array.forEach((item) => {
+  array.map((item, i) => {
     if (item === "flick") {
       trueItem = !trueItem;
     }
-    newArr.push(trueItem);
+    array[i] = trueItem;
   });
-  console.log(newArr);
+  return array;
 }
 
-flickSwitch(["edabit", "flick", "eda", "bit"]);
-flickSwitch(["flick", 11037, 3.14, 53]);
-flickSwitch([false, false, "flick", "sheep", "flick"]);
+console.log(flickSwitch(["edabit", "flick", "eda", "bit"]));
+console.log(flickSwitch(["flick", 11037, 3.14, 53]));
+console.log(flickSwitch([false, false, "flick", "sheep", "flick"]));
+
 
   
