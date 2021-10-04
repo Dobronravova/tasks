@@ -12,7 +12,7 @@
 function flickSwitch(array) {
   let trueItem = true;
   let newArr = array.map((item, i) => {
-      if(item === 'flick') {
+      if (item === "flick") {
         trueItem = !trueItem;
       }
      return item = trueItem;
@@ -24,5 +24,3 @@ console.log(flickSwitch(["edabit", "flick", "eda", "bit"]));
 console.log(flickSwitch(["flick", 11037, 3.14, 53]));
 console.log(flickSwitch([false, false, "flick", "sheep", "flick"]));
 
-
-  
