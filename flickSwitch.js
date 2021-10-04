@@ -11,13 +11,13 @@
 
 function flickSwitch(array) {
   let trueItem = true;
-  array.map((item, i) => {
-    if (item === "flick") {
-      trueItem = !trueItem;
-    }
-    array[i] = trueItem;
+  let newArr = array.map((item, i) => {
+      if(item === 'flick') {
+        trueItem = !trueItem;
+      }
+     return item = trueItem;
   });
-  return array;
+  return newArr;
 }
 
 console.log(flickSwitch(["edabit", "flick", "eda", "bit"]));
